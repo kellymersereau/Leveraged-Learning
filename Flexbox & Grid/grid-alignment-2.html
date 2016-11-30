@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid Alignment 2</title>
+
+	<style type="text/css">
+		.wrapper {
+		  width: 800px;
+		  height: 800px;
+		  margin: 0 auto;
+		  display: grid;
+		  -webkit-grid-template-columns: 150px 150px 150px 150px;
+		  -webkit-grid-template-rows: 150px 150px 150px 150px;
+		  -webkit-grid-gap: 10px;
+		  background-color: #fafafa;
+		}
+
+		.example1 {
+		  align-content: end;
+		  justify-content: end;
+		}
+
+		.example2 {
+		  align-content: space-around;
+		  justify-content: space-between;
+		}
+
+		.example3 {
+		  align-content: center;
+		  justify-content: center;
+		}
+
+		.item1 {
+		  -webkit-grid-column: 1 / 5;
+		  -webkit-grid-row: 1 / 3;
+		}
+
+		.item2 {
+		  -webkit-grid-column: 1 / 4;
+		  -webkit-grid-row: 3;
+		}
+
+		.item3 {
+		  -webkit-grid-column: 4;
+		  -webkit-grid-row: 3 / 5;
+		}
+
+		.item4 {
+		  -webkit-grid-column: 1 / 4;
+		  -webkit-grid-row: 4;
+		}
+
+		.wrapper div {
+		  padding: 10px;
+		  background-color: rgba(41,73,130,.5);
+		  color: #fff;
+		  border-radius: 5px;
+		}
+
+		html {
+		  box-sizing: border-box;
+		}
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+
+		body {
+		  font: 1em/1.4 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		  background-color: #fafafa;
+		  color: #000;
+		  margin:0;
+		}
+
+		.cont {
+		  width: 800px;
+		  margin: 0 auto;
+		}
+
+		.code {
+		  background-color: #333;
+		  padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="cont">
+	  <h1>Grid Alignment</h1>
+	  
+	  <p>Aligning the grid in a case where the number of tracks do not equal the size of the container.</p>
+
+	  <h2>Initial values:</h2>
+	  <ul>
+	    <li>align-content: start</li>
+	    <li>justify-content: start</li>
+	  </ul>
+
+	  <p>The white area below is our grid container. It is 800x800 pixels. Our four column and four row track grid is in total 630x630 pixels including the gaps.</p>
+	  <p>By default it appears top left of the container.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper">
+	    <div class="item1">One</div>
+	    <div class="item2">Two</div>
+	    <div class="item3">Three</div>
+	    <div class="item4">Four</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>Changing alignment of the grid</h2>
+	  <p>Chaning the values of align-content and justify-content to end we can move it to bottom right.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example1">
+	    <div class="item1">One</div>
+	    <div class="item2">Two</div>
+	    <div class="item3">Three</div>
+	    <div class="item4">Four</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>space-between and space-around</h2>
+	  <p>We can use the keyword values space-between or space-around. These will increase the gaps between items.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example2">
+	    <div class="item1">One</div>
+	    <div class="item2">Two</div>
+	    <div class="item3">Three</div>
+	    <div class="item4">Four</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>Centre the grid</h2>
+	  <p>The alignment properties make it easy to centre the grid.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example3">
+	    <div class="item1">One</div>
+	    <div class="item2">Two</div>
+	    <div class="item3">Three</div>
+	    <div class="item4">Four</div>
+	  </div>
+	</div>
+
+
+	</div>
+</body>
+</html>

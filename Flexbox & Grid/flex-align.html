@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ALIGNMENT IN FLEXBOX</title>
+
+	<style type="text/css">
+		.example2 {
+		  height: 15em;
+		}
+
+		.example3 {
+		  height: 15em;
+		  align-items: flex-start;
+		}
+
+		.example4 {
+		  height: 15em;
+		  align-items: flex-end;
+		}
+
+		.example5 {
+		  height: 15em;
+		  align-items: center;
+		}
+
+		.example6 {
+		  height: 15em;
+		  align-items: baseline;
+		}
+
+		.example6 div:first-child {
+		  font-size: 150%;
+		}
+
+		.example7 {
+		  height: 15em;
+		  justify-content: space-between;
+		}
+
+		.example8 {
+		  height: 15em;
+		  justify-content: space-around;
+		}
+
+		.example9 {
+		  height: 15em;
+		  justify-content: flex-end;
+		}
+
+		.example10 {
+		  height: 15em;
+		  justify-content: center;
+		}
+
+
+
+		.wrapper {
+		  width: 800px;
+		  margin: 0 auto;
+		  display: flex;
+		  background-color: #fafafa;
+		}
+
+		.wrapper div {
+		  padding: 10px;
+		  background-color: rgb(41,73,130);
+		  color: #fff;
+		  border-radius: 5px;
+		}
+
+		html {
+		  box-sizing: border-box;
+		}
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+
+		body {
+		  font: 1em/1.4 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		  background-color: #fafafa;
+		  color: #000;
+		  margin:0;
+		}
+
+		.cont {
+		  width: 800px;
+		  margin: 0 auto;
+		}
+
+		.code {
+		  background-color: #333;
+		  padding: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="cont">
+	  <h1>Flexbox Align & Justify Examples
+	  <br>flex-direction: row</h1>
+
+	  <h2>Initial values:</h2>
+	  <ul>
+	    <li>align-items: stretch</li>
+	    <li>justify-content: flex-start</li>
+	  </ul>
+
+	  <p>The height of the flex container is defined by the height of the taller first item. The other items stretch to the same height.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example1">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.</div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>Changing the height of the container</h2>
+
+	  <p>I have given the flex container a height of 15em. This now defines the height of the flex container. The items stretch.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example2">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.
+	    </div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+	<div class="cont">
+	  <h2>align-items: flex-start</h2>
+	  <p>The items align to the start of the flex container.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example3">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.
+	    </div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>align-items: flex-end</h2>
+	  <p>The items align to the end of the flex container.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example4">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.
+	    </div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>align-items: baseline</h2>
+	  <p>The items use baseline alignment, I have increased the font size of the first item to demonstrate this.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example6">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.
+	    </div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>justify-content: space-between</h2>
+	  <p>Spacing items out evenly and flush with left and right of the container.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example7">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.
+	    </div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>justify-content: space-around</h2>
+	  <p>Spacing items out evenly with space all around.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example8">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.
+	    </div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>justify-content: flex-end</h2>
+	  <p>Justifying to the end of the flex container.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example9">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.
+	    </div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+
+	<div class="cont">
+	  <h2>justify-content: center</h2>
+	  <p>Justifying to the center of the flex container.</p>
+	</div>
+	<div class="code">
+	  <div class="wrapper example10">
+	    <div>One
+	      <br>... is taller
+	      <br>than the rest.
+	    </div>
+	    <div>Two</div>
+	    <div>Three</div>
+	    <div>Four</div>
+	    <div>Five</div>
+	    <div>Six</div>
+	  </div>
+	</div>
+
+	</div>
+
+</body>
+</html>
