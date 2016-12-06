@@ -7,6 +7,7 @@ var commonHeader = {'Content-Type': 'text/html'};
 function home (request,response){
     //if URL == "/" && GET
   if(request.url === "/") {
+
     if(request.method.toLowerCase() === "get") {
       response.writeHead(200, commonHeader);
       renderer.view("header", {}, response);
@@ -19,12 +20,12 @@ function home (request,response){
         console.log(postBody.toString()); 
         //extract the username
         var query = queryString.parse(postBody.toString());
+        //redirect to /:username
         response.writeHead(303, {"location": "/" + query.username});
         response.end();
-          
-      //redirect to /:username
+        
       });
-     
+
     }
     
   };
